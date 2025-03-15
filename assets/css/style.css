@@ -1238,3 +1238,31 @@ section {
   animation-delay:0s;
   -webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
+
+@keyframes moveRandom {
+  0% {
+    top: 10%;
+    left: 10%;
+    transform: scale(1);
+  }
+  25% {
+    top: 20%;
+    left: 80%;
+    transform: scale(1.2);
+  }
+  50% {
+    top: 80%;
+    left: 30%;
+    transform: scale(0.8);
+  }
+  75% {
+    top: 50%;
+    left: 60%;
+    transform: scale(1.1);
+  }
+  100% {
+    top: 10%;
+    left: 10%;
+    transform: scale(1);
+  }
+}

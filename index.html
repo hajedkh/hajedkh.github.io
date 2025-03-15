@@ -37,6 +37,9 @@
 
 <body>
 
+  
+  
+
   <!-- ======= Mobile nav toggle button ======= -->
   <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -47,7 +50,7 @@
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-activity"></i> <span>Skills</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto"><i class="bx bxs-bolt"></i> <span>Skills</span></a></li>
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
    
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
@@ -58,14 +61,25 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
+  <!-- Badges Section 
+    <div class="badges-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
+      <img src="https://www.cncf.io/wp-content/uploads/2024/03/kubestronaut-stacked-color.png" alt="KubeAstronaut Badge" style="position: absolute; width: 90px; height: 90px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 15s ease-in-out infinite; animation-delay: 0s;">
+      <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-cncf/sponsors/cncf-icon-color.png" alt="CNCF Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 17s ease-in-out infinite; animation-delay: 2s;">
+      <img src="https://www.cloudcamp.la/img/aws_saa_badge.png" alt="AWS SAA Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 13s ease-in-out infinite; animation-delay: 4s;">
+      <img src="https://data.it-novum.com/wp-content/uploads/2021/02/apache_kafka_logo-1200x547.png" alt="Kafka Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 16s ease-in-out infinite; animation-delay: 1s;">
+      <img src="https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png" alt="Java Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 18s ease-in-out infinite; animation-delay: 3s;">
+      <img src="https://th.bing.com/th/id/R.ca215b0fd0d5037ade25ad048491e3d6?rik=MgGwYEguevL4cg&pid=ImgRaw&r=0" alt="Keycloak Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 14s ease-in-out infinite; animation-delay: 5s;">
+      <img src="https://i0.wp.com/leeno.org/wp-content/uploads/2018/06/GitLab_Logo.svg_.png?fit=960%2C887&ssl=1" alt="GitLab CI/CD Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 19s ease-in-out infinite; animation-delay: 6s;">
+    </div>-->
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Hajed Khlifi</h1>
-      <p>I'm <span class="typed" data-typed-items="Software Engineer, Cloud Systems Architect,JAVA System Architect, DevOps Engineer,Certified AWS Solution Architect,Certified Kubernetes Application Developer"></span></p>
+      <p>I'm a <span class="typed" data-typed-items="Software Engineer, Cloud Solutions Architect, DevOps expert,  Microservices and distributed systems expert, Certified Kubernetes Champion : Kubeastronaut"></span></p>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/hajed-kh/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/hajedkh" target="_blank" class="github"><i class="bx bxl-github"></i></a>
         <a href="https://stackoverflow.com/users/14109227/hajed-kh" target="_blank" class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
-        <a href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://medium.com/@kh.hajed" target="_blank" class="medium"><i class="bx bxl-medium"></i></a>
+      
 
       </div>
     </div>
@@ -92,14 +106,9 @@
             <img src="assets/img/me.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Software Engineer / DevOps&Cloud Engineer</h3>
-            <p class="fst-italic pt-2" >As a software engineer with an extensive experience in DevOps/Cloud technologies and a strong background  in Java backend development.
-               I am an innovative problem solver who is dedicated to delivering high-quality solutions that meet business needs.
-                With expertise in containerization/orchestration tools, deployment automation, and continuous integration, 
-                I am committed to ensuring optimal performance, scalability, and reliability for the systems I build. 
-                I am passionate about staying up-to-date with the latest technologies and industry trends,
-                 and I am capable of collaborating with cross-functional teams to design and implement secure and compliant systems.
-                  I am also experienced in leading and mentoring junior team members, and possess excellent communication and interpersonal skills.</p>
+            <h3>Lead DevOps engineer / Cloud Architect </h3>
+            <p class="fst-italic pt-2" >Lead DevOps engineer and Cloud Architect with strong expertise in cloud-native architectures, CI/CD, and automation. Certified Kubernetes Champion (Kubestronaut) skilled in managing large scale microservices environments, distributed systems, Batch processing, Cloud and production environments support.
+               Passionate about optimizing deployments and advancing open-source innovation. Proactive CNCF contributor driving cutting-edge DevOps strategies and technical speaker. I am currently learning more about observability and tracin g for Microservices environments.</p>
 
             
             <div class="row pt-4">
@@ -108,7 +117,7 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Full Name:</strong> <span>Hajed Khlifi</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>7 March 1998</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>hajedkh.github.io</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+216 92 788 967</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+352 XXX XX XX XX</span></li>
                   
                 </ul>
               </div>
@@ -116,13 +125,13 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>kh.hajed@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree :</strong> <span>Software Engineering</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Tunis, Tunisia</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Passion:</strong> <span>Travel and Camping</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Luxembourg, Luxembourg</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Passion:</strong> <span>Sports, Travel and Cars </span></li>
                 </ul>
               </div>
             </div>
               <p class="fst-italic pt-2">
-              <a href="assets/files/Hajed_Khlifi_Resume.pdf" target="_blank">
+              <a href="assets/files/CV-HajedKhlifi.docx.pdf" target="_blank">
                 <button  type="button" class="btn btn-primary">Download PDF CV</button>
               </a>
               
@@ -140,98 +149,38 @@
 
   
 
-    <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Skills</h2>
-          <p></p>
         </div>
-
+    
         <div class="row skills-content">
-
           <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">Containerization and orchestration tools (Docker, Kubernetes) *Certified*<i class="val">85%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
+            <ul class="list-unstyled">
+              <li><span class="badge bg-primary">CI/CD:</span> GitLab CI, Jenkins, Tekton, ArgoCD, XL-Deploy, Artifactory, SonarQube</li>
+              <li><span class="badge bg-primary">Containers & Orchestration:</span> Docker, Kubernetes, OpenShift (OCP), Helm</li>
+              <li><span class="badge bg-primary">Cloud:</span> AWS (Solutions Architect Certified), Terraform, CloudFormation</li>
+              <li><span class="badge bg-primary">Infrastructure Automation:</span> Terraform, Ansible, CloudFormation</li>
+              <li><span class="badge bg-primary">Monitoring:</span> Prometheus, Grafana, Jaeger</li> 
+              <li><span class="badge bg-primary">Operating Systems:</span> RHEL, Linux administration</li>
 
-            <div class="progress">
-              <span class="skill">Cloud systems architect (AWS Solution Architect) *Certified*<i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-         
-
-           <!-- <div class="progress">
-              <span class="skill">MERN stack<i class="val">50%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>-->
-            <div class="progress">
-              <span class="skill">Deployment automation and continuous integration (Jenkins, GitLab, ArgoCD, Terraform)<i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            
-            <div class="progress">
-              <span class="skill">Linux System administration (REHEL,Jboss EAP, wildfly)   <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
- 
+            </ul>
           </div>
-          
-
+    
           <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill">Java microservices backend development (JAVA, Spring Framework)<i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-
-
-            <div class="progress">
-              <span class="skill">High availability and Security compliance (Clustering, SOC 2, GDPR)<i class="val">70%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <div class="progress">
-              <span class="skill">Agile methodologies <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Project management and team leadership <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-            <!--<div class="progress">
-              <span class="skill">Cloud functions<i class="val">20%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>-->
-
+            <ul class="list-unstyled">
+              <li><span class="badge bg-primary">Programming languages:</span> Java, Python, Shell, GoLang</li>
+              <li><span class="badge bg-primary">Backend Development:</span> API-GAteways,Hibernate,Spring Framework,Sagas,Batch processing(ETL)</li>
+              <li><span class="badge bg-primary">Architectures:</span> Monolithic, SOA, Microservices</li>
+              <li><span class="badge bg-primary">Servers:</span> JBoss EAP, WildFly, Httpd, Nginx</li>
+              <li><span class="badge bg-primary">Databases:</span> PostgreSQL, Oracle, MySQL, MongoDB, CouchDB</li>
+              <li><span class="badge bg-primary">Tools:</span> HashiCorp Vault, Kafka, Spring Cloud Config, Keycloak, WSO2</li>
+            </ul>
           </div>
-
         </div>
-
       </div>
-    </section><!-- End Skills Section -->
+    </section>
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
@@ -252,83 +201,86 @@
               <h4> Software Engineering </h4>
               <h5>2019 - 2023</h5>
               <p><em>Private Higher School of Engineering and Technology, Tunisia</em></p>
-              <p>Software engineering</p>
+              <p>Software engineering (Nightly courses)</p>
             </div>
                 <div class="resume-item">
-              <h4>Bachelor of Electronics &amp; Networking</h4>
+              <h4>Bachelor of IT &amp; Networking</h4>
               <h5>2016 - 2019</h5>
               <p><em>High Institute of Informatics and Mathematics of Monastir , Tunisia</em></p>
               <p>STIC APPLIED LICENSE</p>
             </div>
             <h3 class="resume-title">Awards and certifications</h3>
-            <div class="resume-item ">
+            <div class="resume-item">
+              <h4>Linux Foundation</h4>
+              <p><em>LFS142: Introduction to Backstage, 2025<br>Prometheus (PCA), 2024<br>Kubestronaut, 2024<br>KCNA, 2024<br>KCSA, 2024<br>Certified Kubernetes Security Specialist, 2024<br>Certified Kubernetes Administrator, 2023<br>Certified Kubernetes Application Developer, 2022</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Amazon Web Services</h4>
+              <p><em>AWS Solution Architect Associate, 2023<br>AWS Cloud Practitioner, 2022</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>VoxxedDays Luxembourg - 2024</h4>
+              <p><em>Participant and part of the company media team</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>KubeCon Spain - 2023</h4>
+              <p><em>Participant (remotely)</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>DevOpsCon Berlin & Munchen - 2022</h4>
+              <p><em>Participant and part of the company media team</em></p>
+            </div>
+            <div class="resume-item">
               <h4>Winner of Ruspina challenge 2019</h4>
-              <p><em>Winner of Ruspina challenge 2019: Coder of the year Tunisia 2019 with an innovative idea based on an Android application,"Waves digital solution", developed in 24h non-stop challenge.</em></p>
-        
+              <p><em>Winner of Ruspina challenge 2019: Coder of the year Tunisia 2019 with an innovative idea based on an Android application, "Waves digital solution," developed in a 24h non-stop challenge.</em></p>
             </div>
-            <div class="resume-item ">
-              <h4>Kubernetes Certified</h4>
-              <p><em>CKAD:Certified Kubernetes Application Developer</em></p>
 
-            </div>
-            <div class="resume-item ">
-              <h4>2x AWS Certified</h4>
-              <p><em>AWS Certified Cloud Practictioner<br>AWS Certified Solutions Architect Associate</em></p>
-              <ul>
-              </ul>
-            </div>
-            <div class="resume-item ">
-              <h4>DevOpsCon Berlin/Munchen</h4>
-              <p><em>Partcipant and part of the company media team</em></p>
-              <ul>
-              </ul>
-            </div>
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-              <h4>DevOps Engineer</h4>
-              <h5>2021 - Currently</h5>
-              <p><em>VERMEG for Banking & Insurance Software, Tunisia</em>
-              <br>DevOps&Cloud Analyst supporting Veggo Low Code No Code platform to onbord banking digital solutions.<br>Veggo is a financial industry specific LCNC platform encapsulating VERMEG’s 25 years of unique technical and functional expertise in leading digital transformation of global industry leaders.</p>
-              <ul>
-                <li>Migrating on premises solutions to AWS cloud </li>
-                <li>Kubernetes clusters administration and Deployment analyses (AWS EKS , ArgoCD, Prometheus/Grafana)</li>
-                <li>Banking applications CI/CD automation (GitlabCI)</li>
-                <li>Develop and deploy Authentication and security compliances principles (keycloak, API Gateway configuration)</li>
-                <li>Automate AWS cloud Infrastructure provisong (Terraform)</li>
-                <li>Work hand by hand with backend development teams to achieve high performence depmloyment</li>
-               
-              </ul>
+            <div class="resume-item">
+              <h4>DevOps Consultant</h4>
+              <h5>04/2024 – 02/2025</h5>
+              <p><em>Utmust Group, Luxembourg</em></p>
+              <p>
+                Upgraded OpenShift clusters across multiple environments (Dev, Test, Staging) on VMware vSphere. Integrated tools like OpenShift Data Foundation, ELK stack, ArgoCD, GitLab Runner, HashiCorp Vault, and Prometheus to ensure a scalable, secure, and automated infrastructure. Led migration of applications and configurations, implemented centralized logging and monitoring, and provided comprehensive documentation to support cross-team knowledge transfer and operational excellence.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>DevOps Consultant</h4>
+              <h5>01/2024 – 04/2024</h5>
+              <p><em>BIL: Banque Internationale Luxembourg</em></p>
+              <p>
+                I was tasked with building a monitoring solution with auto-remediation for the core banking OpenShift environment, leveraging Prometheus, Dynatrace, Ansible, and an Event-Driven Platform. This effort was carried out in collaboration with the Containers and Development Platform team.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>DevOps & Cloud Lead Engineer</h4>
+              <h5>06/2022 – 12/2023</h5>
+              <p><em>VERMEG for Banking & Insurance Softwares, Tunisia</em></p>
+              <p>
+                Led the VEGGO team in deploying and optimizing microservices within the Banking business line on AWS/Kubernetes (EKS) environments. Designed scalable AWS architectures, managed Kubernetes clusters, and supported development teams in transitioning to cloud-native solutions. Enhanced CI/CD pipelines, streamlined release management, and ensured high-performance, resilient infrastructure for major banking clients.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Deployment Analyst</h4>
+              <h5>06/2021 – 06/2022</h5>
+              <p><em>VERMEG for Banking & Insurance Softwares, Tunisia</em></p>
+              <p>
+                Promoted to Deployment Analyst within the Tec team, leading critical initiatives for the Insurance Business Line product, Solife. Managed production deployments, SaaS migration, and cloud compliance for key clients like Cardif LuxVie and Lifetri. Oversaw system administration, developed automation scripts, and supported high-availability setups in both on-premises and AWS environments to ensure performance, scalability, and reliability.
+              </p>
             </div>
             <div class="resume-item">
               <h4>Software Developer</h4>
-              <h5>2019 - 2021</h5>
-              <p><em><b>VERMEG for Banking & Insurance Softwares, Tunisia</b></em>
-                <br> Java Backend developper in the Insurance Business line "Solife".<br>
-                Solife is JEE solution enables life and health insurance companies to manage end-to-end their new businesses, policies and claims, with all required supporting features: cash and events management, accounting feed, distribution and fees management, reinsurance, tax and legal, dedicated reporting, claims management etc. </p>
-             <ul>
-                <li>Design and Develop Backend APIs</li>
-                <li>Java Framework Support :Upgrade libraries and tools(Jboss/Wildfly,Spring, hibernate, JPA, ehcache, JMS, MVC...)</li>
-                <li>migrate monolothic applications to microservices.</li>
-                <li>Developping in demand scripts (gradle, groovy) for deploying JEE SOA application</li>
-                <li>Designing and Deploying multi-container applications to Kubernetes</li>
-                <li>Contributing and implementing solutions for cloud compliances tracks and performence tuning</li>
-                <li>European clients Support</li>
-              </ul>
+              <h5>06/2019 – 06/2021</h5>
+              <p><em>VERMEG for Banking & Insurance Softwares, Tunisia</em></p>
+              <p>
+                Worked as a Java Backend Developer in the Solife Business Line (R&D), contributing to a Scrum team responsible for maintaining and enhancing a complex JEE insurance application. Key tasks included bug fixing, API development, batch processing, and improving frameworks to support high-performance, multi-database environments while ensuring security and scalability.
+              </p>
             </div>
-                        <div class="resume-item">
-              <h4>Junior software developer </h4>
-              <h5>2019</h5>
-              <p><em>EAPT development, Monastir</em></p>
-              <ul>
-                <li>Developing Car tracking security system (Java)</li>
-                <li>Mobile app based on AI algorithms (Android)</li>
-                <li>Developing an artificial intelligence application for facial recognition (python/OpenCV)</li>
-                <li>deploying the application to firebase(firebase functions,fireStorage)</li>
-                <li>Developing an Android Application as a client side app</li>
-              </ul>
-            </div>
+          </div>
+          
+
            
           </div>
         </div>
@@ -416,7 +368,8 @@
         <a href="https://www.linkedin.com/in/hajed-kh/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         <a href="https://github.com/hajedkh" target="_blank" class="github"><i class="bx bxl-github"></i></a>
         <a href="https://stackoverflow.com/users/14109227/hajed-kh" target="_blank" class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
-        <a href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://medium.com/@kh.hajed" target="_blank" class="medium"><i class="bx bxl-medium"></i></a>
+      
       </div>
       <div class="copyright">
         &copy; Copyright <strong><span>hajedkh</span></strong>. All Rights Reserved
