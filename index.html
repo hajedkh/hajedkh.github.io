@@ -1,406 +1,2465 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hajed Khlifi — Principal Solution Architect specializing in AI Infrastructure, NVIDIA GPU Platforms, and Kubernetes. Luxembourg-based freelance consultant.">
+<meta name="keywords" content="AI Infrastructure, NVIDIA, Kubernetes, GPU, Cloud Architect, Freelance, Luxembourg, Sovereign Cloud, HPC">
+<meta name="author" content="Hajed Khlifi">
+<meta property="og:title" content="Hajed Khlifi — Principal AI & GPU Infrastructure Architect">
+<meta property="og:description" content="Architecting sovereign AI platforms, GPU clusters, and Kubernetes infrastructure for regulated European markets.">
+<meta property="og:type" content="website">
+<title>Hajed Khlifi — Principal AI & GPU Infrastructure Architect</title>
+<script>
+  // Apply theme BEFORE any paint to prevent flash
+  (function(){
+    var t = localStorage.getItem('hk-theme');
+    if (!t) t = 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 
-  <title>Hajed khLifi</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+<style>
+/* ========================================
+   CSS VARIABLES & RESET
+   ======================================== */
+:root {
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
- 
-  
- 
+/* ---- DARK THEME (default) ---- */
+[data-theme="dark"] {
+  --bg: #080c14;
+  --bg2: #0a0f1a;
+  --surface: #111827;
+  --surface2: #1a2236;
+  --surface3: #212b42;
+  --accent: #00e5a0;
+  --accent-dim: #00c98c;
+  --accent2: #00b8d4;
+  --accent3: #7c4dff;
+  --nvidia: #76b900;
+  --k8s: #326de6;
+  --gcp: #4285f4;
+  --aws: #ff9900;
+  --text: #e8edf5;
+  --text-muted: #8892a8;
+  --text-dim: #5a6480;
+  --border: #1c2640;
+  --border-light: #253050;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-lg: 0 16px 64px rgba(0,0,0,0.5);
+  /* Nav & backdrop */
+  --nav-bg: rgba(8,12,20,0.85);
+  --nav-bg-scroll: rgba(8,12,20,0.95);
+  --nav-border: rgba(28,38,64,0.6);
+  --nav-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --mobile-nav-bg: rgba(8,12,20,0.97);
+  /* Backgrounds */
+  --grid-line: rgba(0,229,160,0.018);
+  --glow1: rgba(0,229,160,0.05);
+  --glow2: rgba(0,184,212,0.04);
+  --noise-opacity: 0.025;
+  /* Accents with alpha */
+  --accent-a06: rgba(0,229,160,0.06);
+  --accent-a08: rgba(0,229,160,0.08);
+  --accent-a10: rgba(0,229,160,0.10);
+  --accent-a20: rgba(0,229,160,0.20);
+  --accent-a25: rgba(0,229,160,0.25);
+  --accent-a30: rgba(0,229,160,0.30);
+  --accent3-a35: rgba(124,77,255,0.35);
+  --selection-bg: rgba(0,229,160,0.25);
+  --hero-badge-nv-bg: rgba(118,185,0,0.10);
+  --hero-badge-nv-border: rgba(118,185,0,0.22);
+  --hero-badge-nv-color: #76b900;
+  --hero-badge-k8-bg: rgba(50,109,230,0.10);
+  --hero-badge-k8-border: rgba(50,109,230,0.22);
+  --hero-badge-k8-color: #5b8def;
+  --hero-badge-gc-bg: rgba(66,133,244,0.10);
+  --hero-badge-gc-border: rgba(66,133,244,0.22);
+  --hero-badge-gc-color: #6fa3f7;
+  --hero-badge-sp-bg: rgba(124,77,255,0.10);
+  --hero-badge-sp-border: rgba(124,77,255,0.22);
+  --hero-badge-sp-color: #b49aff;
+  --cert-nvidia-bg: rgba(118,185,0,0.12);
+  --cert-nvidia-border: rgba(118,185,0,0.2);
+  --cert-cncf-bg: rgba(50,109,230,0.12);
+  --cert-cncf-border: rgba(50,109,230,0.2);
+  --cert-google-bg: rgba(66,133,244,0.12);
+  --cert-google-border: rgba(66,133,244,0.2);
+  --cert-linux-bg: rgba(255,200,0,0.12);
+  --cert-linux-border: rgba(255,200,0,0.2);
+  --cert-aws-bg: rgba(255,153,0,0.12);
+  --cert-aws-border: rgba(255,153,0,0.2);
+  --project-gradient: linear-gradient(135deg, rgba(0,229,160,0.06), rgba(0,184,212,0.06), rgba(124,77,255,0.06));
+  --btn-primary-hover-shadow: 0 6px 24px rgba(0,229,160,0.3);
+  --form-focus-shadow: 0 0 0 3px rgba(0,229,160,0.1);
+  --photo-gradient: linear-gradient(135deg, rgba(0,229,160,0.04) 0%, transparent 60%);
+}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+/* ---- LIGHT THEME ---- */
+[data-theme="light"] {
+  --bg: #f4f6fa;
+  --bg2: #edf0f7;
+  --surface: #ffffff;
+  --surface2: #f0f2f8;
+  --surface3: #e4e8f0;
+  --accent: #009d6e;
+  --accent-dim: #008a60;
+  --accent2: #0097a7;
+  --accent3: #6234cc;
+  --nvidia: #5a9200;
+  --k8s: #2555b7;
+  --gcp: #3367d6;
+  --aws: #d68200;
+  --text: #1a2030;
+  --text-muted: #556078;
+  --text-dim: #8895a8;
+  --border: #d8dde8;
+  --border-light: #c8cfe0;
+  --shadow: 0 8px 32px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 64px rgba(0,0,0,0.1);
+  /* Nav & backdrop */
+  --nav-bg: rgba(244,246,250,0.85);
+  --nav-bg-scroll: rgba(244,246,250,0.96);
+  --nav-border: rgba(216,221,232,0.7);
+  --nav-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --mobile-nav-bg: rgba(244,246,250,0.97);
+  /* Backgrounds */
+  --grid-line: rgba(0,157,110,0.04);
+  --glow1: rgba(0,157,110,0.05);
+  --glow2: rgba(0,151,167,0.04);
+  --noise-opacity: 0.015;
+  /* Accents with alpha */
+  --accent-a06: rgba(0,157,110,0.06);
+  --accent-a08: rgba(0,157,110,0.08);
+  --accent-a10: rgba(0,157,110,0.10);
+  --accent-a20: rgba(0,157,110,0.20);
+  --accent-a25: rgba(0,157,110,0.15);
+  --accent-a30: rgba(0,157,110,0.20);
+  --accent3-a35: rgba(98,52,204,0.2);
+  --selection-bg: rgba(0,157,110,0.18);
+  --hero-badge-nv-bg: rgba(90,146,0,0.08);
+  --hero-badge-nv-border: rgba(90,146,0,0.2);
+  --hero-badge-nv-color: #4a7d00;
+  --hero-badge-k8-bg: rgba(37,85,183,0.08);
+  --hero-badge-k8-border: rgba(37,85,183,0.2);
+  --hero-badge-k8-color: #2555b7;
+  --hero-badge-gc-bg: rgba(51,103,214,0.08);
+  --hero-badge-gc-border: rgba(51,103,214,0.2);
+  --hero-badge-gc-color: #3367d6;
+  --hero-badge-sp-bg: rgba(98,52,204,0.08);
+  --hero-badge-sp-border: rgba(98,52,204,0.2);
+  --hero-badge-sp-color: #6234cc;
+  --cert-nvidia-bg: rgba(90,146,0,0.08);
+  --cert-nvidia-border: rgba(90,146,0,0.18);
+  --cert-cncf-bg: rgba(37,85,183,0.08);
+  --cert-cncf-border: rgba(37,85,183,0.18);
+  --cert-google-bg: rgba(51,103,214,0.08);
+  --cert-google-border: rgba(51,103,214,0.18);
+  --cert-linux-bg: rgba(200,156,0,0.08);
+  --cert-linux-border: rgba(200,156,0,0.18);
+  --cert-aws-bg: rgba(214,130,0,0.08);
+  --cert-aws-border: rgba(214,130,0,0.18);
+  --project-gradient: linear-gradient(135deg, rgba(0,157,110,0.05), rgba(0,151,167,0.05), rgba(98,52,204,0.04));
+  --btn-primary-hover-shadow: 0 6px 24px rgba(0,157,110,0.25);
+  --form-focus-shadow: 0 0 0 3px rgba(0,157,110,0.12);
+  --photo-gradient: linear-gradient(135deg, rgba(0,157,110,0.04) 0%, transparent 60%);
+}
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
-  <!-- =======================================================
-  * Template Name: MyResume - v4.3.0
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--accent2); }
+img { max-width: 100%; display: block; }
+
+::selection { background: var(--selection-bg); color: var(--text); }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-dim); }
+
+/* ========================================
+   BACKGROUND EFFECTS
+   ======================================== */
+.bg-noise {
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: var(--noise-opacity);
+  pointer-events: none; z-index: 0;
+}
+
+.bg-grid {
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none; z-index: 0;
+}
+
+.bg-glow-1 {
+  position: fixed; top: -300px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, var(--glow1) 0%, transparent 65%);
+  pointer-events: none; z-index: 0;
+}
+
+.bg-glow-2 {
+  position: fixed; bottom: -400px; left: -200px;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, var(--glow2) 0%, transparent 65%);
+  pointer-events: none; z-index: 0;
+}
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid var(--nav-border);
+  transition: all var(--transition);
+}
+
+nav.scrolled {
+  background: var(--nav-bg-scroll);
+  box-shadow: var(--nav-shadow);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.nav-logo span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--accent);
+  background: var(--accent-a06);
+}
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  font-weight: 700 !important;
+  padding: 8px 20px !important;
+  border-radius: 8px !important;
+}
+
+.nav-cta:hover {
+  background: var(--accent-dim) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--btn-primary-hover-shadow);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  width: 24px; height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label::before {
+  content: '';
+  width: 28px; height: 1px;
+  background: var(--accent);
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.6rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.05s; }
+.stagger-2 { transition-delay: 0.1s; }
+.stagger-3 { transition-delay: 0.15s; }
+.stagger-4 { transition-delay: 0.2s; }
+.stagger-5 { transition-delay: 0.25s; }
+.stagger-6 { transition-delay: 0.3s; }
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text { max-width: 640px; }
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: var(--accent-a08);
+  border: 1px solid var(--accent-a20);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 28px;
+  animation: fadeIn 0.8s ease 0.2s both;
+}
+
+.hero-status .pulse {
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--accent-a30); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px transparent; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 4rem;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: 8px;
+  animation: fadeIn 0.8s ease 0.3s both;
+}
+
+.hero-name .gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 50%, var(--accent3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-role {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin-bottom: 24px;
+  animation: fadeIn 0.8s ease 0.4s both;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 520px;
+  animation: fadeIn 0.8s ease 0.5s both;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+  animation: fadeIn 0.8s ease 0.55s both;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.hero-badge.nv { background: var(--hero-badge-nv-bg); color: var(--hero-badge-nv-color); border: 1px solid var(--hero-badge-nv-border); }
+.hero-badge.k8 { background: var(--hero-badge-k8-bg); color: var(--hero-badge-k8-color); border: 1px solid var(--hero-badge-k8-border); }
+.hero-badge.gc { background: var(--hero-badge-gc-bg); color: var(--hero-badge-gc-color); border: 1px solid var(--hero-badge-gc-border); }
+.hero-badge.sp { background: var(--hero-badge-sp-bg); color: var(--hero-badge-sp-color); border: 1px solid var(--hero-badge-sp-border); }
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s ease 0.6s both;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: #00ffb0;
+  transform: translateY(-2px);
+  box-shadow: var(--btn-primary-hover-shadow);
+  color: var(--bg);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border-light);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-a06);
+  transform: translateY(-2px);
+}
+
+/* Hero Photo Area */
+.hero-photo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease 0.7s both;
+}
+
+.photo-frame {
+  position: relative;
+  width: 320px;
+  height: 380px;
+}
+#profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio and fills container */
+  display: block;
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--photo-gradient);
+}
+
+.photo-icon {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--surface2);
+  border: 2px dashed var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-dim);
+}
+
+.photo-hint {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Floating stats around photo */
+.float-stat {
+  position: absolute;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-size: 0.75rem;
+  box-shadow: var(--shadow);
+  animation: float 4s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+.float-stat .val {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+  display: block;
+}
+
+.float-stat .lbl {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.float-stat.s1 { top: 20px; left: -50px; animation-delay: 0s; }
+.float-stat.s2 { bottom: 60px; right: -50px; animation-delay: 1s; }
+.float-stat.s3 { bottom: -10px; left: -30px; animation-delay: 2s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ========================================
+   ABOUT / SERVICES
+   ======================================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.service-card:hover {
+  border-color: var(--accent-a30);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover::after { transform: scaleX(1); }
+
+.service-icon {
+  width: 52px; height: 52px;
+  background: var(--surface2);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.service-tag {
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ========================================
+   EXPERIENCE TIMELINE
+   ======================================== */
+.timeline {
+  position: relative;
+  margin-top: 48px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent2), var(--accent3), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 76px;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: 19px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--accent);
+  z-index: 2;
+  transition: all var(--transition);
+}
+
+.timeline-item:hover .timeline-dot {
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent-a30);
+}
+
+.timeline-item.current .timeline-dot {
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-a30);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.timeline-company {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.timeline-date {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 4px 12px;
+  background: var(--accent-a08);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.timeline-role {
+  font-size: 0.92rem;
+  color: var(--accent2);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.timeline-location {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.timeline-points {
+  list-style: none;
+}
+
+.timeline-points li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.timeline-points li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ========================================
+   CERTIFICATIONS
+   ======================================== */
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: all var(--transition);
+}
+
+.cert-card:hover {
+  border-color: var(--accent-a30);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.cert-icon {
+  width: 50px; height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.cert-icon.nvidia { background: var(--cert-nvidia-bg); color: var(--nvidia); border: 1px solid var(--cert-nvidia-border); }
+.cert-icon.cncf { background: var(--cert-cncf-bg); color: var(--k8s); border: 1px solid var(--cert-cncf-border); }
+.cert-icon.google { background: var(--cert-google-bg); color: var(--gcp); border: 1px solid var(--cert-google-border); }
+.cert-icon.linux { background: var(--cert-linux-bg); color: var(--aws); border: 1px solid var(--cert-linux-border); }
+.cert-icon.aws { background: var(--cert-aws-bg); color: var(--aws); border: 1px solid var(--cert-aws-border); }
+
+.cert-info { flex: 1; }
+
+.cert-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+}
+
+.cert-issuer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.cert-date {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+
+.cert-badge-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.cert-sub {
+  font-size: 0.65rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* ========================================
+   SKILLS
+   ======================================== */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.skill-category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: all var(--transition);
+}
+
+.skill-category:hover {
+  border-color: var(--accent-a20);
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.skill-cat-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+}
+
+.skill-cat-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-pill {
+  font-size: 0.78rem;
+  padding: 6px 13px;
+  border-radius: 7px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.skill-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-a06);
+}
+
+.skill-pill.featured {
+  border-color: var(--accent-a30);
+  color: var(--accent);
+  background: var(--accent-a06);
+}
+
+/* ========================================
+   SPEAKING
+   ======================================== */
+.speaking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.speaking-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.speaking-card:hover {
+  border-color: var(--accent3-a35);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.speaking-event {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.speaking-location {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.speaking-year {
+  font-size: 0.72rem;
+  color: var(--accent3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+/* ========================================
+   PROJECTS SHOWCASE
+   ======================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.project-card:hover {
+  border-color: var(--accent-a30);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-thumb {
+  width: 100%;
+  height: 200px;
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-thumb::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--project-gradient);
+}
+
+.project-thumb-placeholder {
+  font-size: 3rem;
+  color: var(--text-dim);
+  z-index: 1;
+}
+
+.project-thumb-hint {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  background: var(--nav-bg);
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+
+.project-body {
+  padding: 24px;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.project-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tech-tag {
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* ========================================
+   CONTACT
+   ======================================== */
+#contact {
+  border-top: 1px solid var(--border);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 48px; height: 48px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 0.92rem;
+  color: var(--text);
+  font-family: inherit;
+  transition: all var(--transition);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: var(--form-focus-shadow);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+/* ========================================
+   STATS BAR
+   ======================================== */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 48px 0;
+  margin-top: 60px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.stat-item { text-align: center; }
+
+.stat-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.4rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+/* ========================================
+   LANGUAGES
+   ======================================== */
+.languages-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.lang-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+}
+
+.lang-name { font-weight: 600; font-size: 0.92rem; }
+.lang-level { font-size: 0.78rem; color: var(--text-muted); }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-photo-area { display: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero-name { font-size: 2.8rem; }
+  .section-title { font-size: 2rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  section { padding: 70px 0; }
+
+  .nav-links { 
+    display: none;
+    position: fixed;
+    top: 70px; left: 0; right: 0;
+    background: var(--mobile-nav-bg);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open { display: flex; }
+  .hamburger { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .hero-name { font-size: 2.2rem; }
+  .container { padding: 0 18px; }
+  .nav-inner { padding: 0 18px; }
+}
+/* ========================================
+   THEME TOGGLE
+   ======================================== */
+.theme-toggle {
+  position: relative;
+  width: 52px;
+  height: 28px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transition: all var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+}
+
+.theme-toggle .toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent);
+  transition: all 0.4s cubic-bezier(0.68, -0.15, 0.265, 1.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 1;
+}
+
+[data-theme="light"] .theme-toggle .toggle-thumb {
+  left: 27px;
+}
+
+.theme-toggle .icon-moon,
+.theme-toggle .icon-sun {
+  position: absolute;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Smooth theme transition on everything */
+body,
+body *:not(script):not(style) {
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Override to keep intentional transitions */
+.btn, .nav-links a, .service-card, .cert-card, .project-card,
+.speaking-card, .skill-pill, .timeline-dot, .theme-toggle .toggle-thumb {
+  transition: all var(--transition);
+}
+
+/* Light mode primary button text fix */
+[data-theme="light"] .btn-primary {
+  color: #fff;
+}
+[data-theme="light"] .btn-primary:hover {
+  color: #fff;
+  background: var(--accent-dim);
+}
+[data-theme="light"] .nav-cta {
+  color: #fff !important;
+}
+
+</style>
 </head>
 
 <body>
 
-  
-  
+<div class="bg-noise"></div>
+<div class="bg-grid"></div>
+<div class="bg-glow-1"></div>
+<div class="bg-glow-2"></div>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex flex-column justify-content-center">
+<!-- ======== NAVIGATION ======== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">H<span>.</span>K</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+      <span class="toggle-thumb">
+        <span class="icon-moon">&#9790;</span>
+        <span class="icon-sun">&#9728;</span>
+      </span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bxs-bolt"></i> <span>Skills</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-   
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav><!-- .nav-menu -->
+<!-- ======== HERO ======== -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <!-- <div class="hero-status">
+          <span class="pulse"></span>
+          Available for Freelance Consulting
+        </div> -->
+        <h1 class="hero-name">
+          Hajed<br><span class="gradient">Khlifi</span>
+        </h1>
+        <p class="hero-role">Principal Solution Architect — DevOps, Cloud, AI & HPC Infrastructure</p>
+        <p class="hero-desc">
+          I architect and deploy production ready, secure, large-scale platforms on air-gapped, 
+          sovereign, hybrid and public clouds using Kubernetes, Openshift, Nvidia HGX, AWS, GCP and full Entreprise tooling 
+          for regulated Entreprise Editions markets.
+        </p>
+        <div class="hero-badges">
+          <span class="hero-badge nv"><img src="https://upload.wikimedia.org/wikipedia/sco/2/21/Nvidia_logo.svg" alt="NVIDIA" style="width:16px; height:16px;"> NVIDIA NCP-AIO</span>
+          <span class="hero-badge k8"><img src="https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg" alt="K8s" style="width:16px; height:16px;"> Kubestronaut</span>
+          <span class="hero-badge gc">&#9729; AWS / GCP Architect</span>
+          <span class="hero-badge sp">&#127908; Int'l Speaker</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
+          <a href="https://linkedin.com/in/hajed-kh" target="_blank" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/hajedkh" target="_blank" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
 
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
-  <!-- Badges Section 
-    <div class="badges-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1;">
-      <img src="https://www.cncf.io/wp-content/uploads/2024/03/kubestronaut-stacked-color.png" alt="KubeAstronaut Badge" style="position: absolute; width: 90px; height: 90px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 15s ease-in-out infinite; animation-delay: 0s;">
-      <img src="https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-cncf/sponsors/cncf-icon-color.png" alt="CNCF Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 17s ease-in-out infinite; animation-delay: 2s;">
-      <img src="https://www.cloudcamp.la/img/aws_saa_badge.png" alt="AWS SAA Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 13s ease-in-out infinite; animation-delay: 4s;">
-      <img src="https://data.it-novum.com/wp-content/uploads/2021/02/apache_kafka_logo-1200x547.png" alt="Kafka Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 16s ease-in-out infinite; animation-delay: 1s;">
-      <img src="https://download.logo.wine/logo/Java_(programming_language)/Java_(programming_language)-Logo.wine.png" alt="Java Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 18s ease-in-out infinite; animation-delay: 3s;">
-      <img src="https://th.bing.com/th/id/R.ca215b0fd0d5037ade25ad048491e3d6?rik=MgGwYEguevL4cg&pid=ImgRaw&r=0" alt="Keycloak Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 14s ease-in-out infinite; animation-delay: 5s;">
-      <img src="https://i0.wp.com/leeno.org/wp-content/uploads/2018/06/GitLab_Logo.svg_.png?fit=960%2C887&ssl=1" alt="GitLab CI/CD Badge" style="position: absolute; width: 80px; height: 80px; object-fit: contain; filter: drop-shadow(0 0 5px rgba(0,0,0,0.3)); animation: moveRandom 19s ease-in-out infinite; animation-delay: 6s;">
-    </div>-->
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Hajed Khlifi</h1>
-      <p>I'm a <span class="typed" data-typed-items="Software Engineer, Cloud Solutions Architect, DevOps expert,  Microservices and distributed systems expert, Certified Kubernetes Champion : Kubeastronaut"></span></p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/hajed-kh/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/hajedkh" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://stackoverflow.com/users/14109227/hajed-kh" target="_blank" class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
-        <a href="https://medium.com/@kh.hajed" target="_blank" class="medium"><i class="bx bxl-medium"></i></a>
-      
-
+      <div class="hero-photo-area">
+        <div class="photo-frame">
+          <div class="photo-placeholder">
+             <img 
+        id="profile-photo"
+        src="https://cache.sessionize.com/image/1f11-400o400o2-EjhYtCZTxKph5pxzUPjWE6.png"
+        alt="Profile Photo"
+      ></div>
+          <!-- Floating stats -->
+          <div class="float-stat s1">
+            <span class="val">7+</span>
+            <span class="lbl">Years Experience</span>
+          </div>
+          <div class="float-stat s2">
+            <span class="val">10+</span>
+            <span class="lbl">Certifications</span>
+          </div>
+          <div class="float-stat s3">
+            <span class="val">20+</span>
+            <span class="lbl">Conferences participation</span>
+          </div>
+        </div>
       </div>
     </div>
-        <svg class="arrows">
-      <path class="a1" d="M0 0 L30 32 L60 0"></path>
-      <path class="a2" d="M0 20 L30 52 L60 20"></path>
-      <path class="a3" d="M0 40 L30 72 L60 40"></path>
-    </svg>
-  </section><!-- End Hero -->
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About</h2>
-        
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/img/me.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Lead DevOps engineer / Cloud Architect </h3>
-            <p class="fst-italic pt-2" >Lead DevOps engineer and Cloud Architect with strong expertise in cloud-native architectures, CI/CD, and automation. Certified Kubernetes Champion (Kubestronaut) skilled in managing large scale microservices environments, distributed systems, Batch processing, Cloud and production environments support.
-               Passionate about optimizing deployments and advancing open-source innovation. Proactive CNCF contributor driving cutting-edge DevOps strategies and technical speaker. I am currently learning more about observability and tracin g for Microservices environments.</p>
-
-            
-            <div class="row pt-4">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Full Name:</strong> <span>Hajed Khlifi</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>7 March 1998</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>hajedkh.github.io</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+352 XXX XX XX XX</span></li>
-                  
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>kh.hajed@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree :</strong> <span>Software Engineering</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Luxembourg, Luxembourg</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Passion:</strong> <span>Sports, Travel and Cars </span></li>
-                </ul>
-              </div>
-            </div>
-              <p class="fst-italic pt-2">
-              <a href="assets/files/CV-HajedKhlifi.docx.pdf" target="_blank">
-                <button  type="button" class="btn btn-primary">Download PDF CV</button>
-              </a>
-              
-              <!-- <span style="color: #0563bb;  " >hajed@kh:~$ </span> sudo ps -A |  grep <span>About Me</span> -->
-             
-
-            </p>
-  
-
-          </div>
-        </div>
-
+    <!-- Stats bar -->
+    <div class="stats-bar reveal">
+      <div class="stat-item">
+        <div class="stat-number">7+</div>
+        <div class="stat-label">Years in DevOps & Cloud</div>
       </div>
-    </section><!-- End About Section -->
-
-  
-
-    <section id="skills" class="skills section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-    
-        <div class="row skills-content">
-          <div class="col-lg-6">
-            <ul class="list-unstyled">
-              <li><span class="badge bg-primary">CI/CD:</span> GitLab CI, Jenkins, Tekton, ArgoCD, XL-Deploy, Artifactory, SonarQube</li>
-              <li><span class="badge bg-primary">Containers & Orchestration:</span> Docker, Kubernetes, OpenShift (OCP), Helm</li>
-              <li><span class="badge bg-primary">Cloud:</span> AWS (Solutions Architect Certified), Terraform, CloudFormation</li>
-              <li><span class="badge bg-primary">Infrastructure Automation:</span> Terraform, Ansible, CloudFormation</li>
-              <li><span class="badge bg-primary">Monitoring:</span> Prometheus, Grafana, Jaeger</li> 
-              <li><span class="badge bg-primary">Operating Systems:</span> RHEL, Linux administration</li>
-
-            </ul>
-          </div>
-    
-          <div class="col-lg-6">
-            <ul class="list-unstyled">
-              <li><span class="badge bg-primary">Programming languages:</span> Java, Python, Shell, GoLang</li>
-              <li><span class="badge bg-primary">Backend Development:</span> API-GAteways,Hibernate,Spring Framework,Sagas,Batch processing(ETL)</li>
-              <li><span class="badge bg-primary">Architectures:</span> Monolithic, SOA, Microservices</li>
-              <li><span class="badge bg-primary">Servers:</span> JBoss EAP, WildFly, Httpd, Nginx</li>
-              <li><span class="badge bg-primary">Databases:</span> PostgreSQL, Oracle, MySQL, MongoDB, CouchDB</li>
-              <li><span class="badge bg-primary">Tools:</span> HashiCorp Vault, Kafka, Spring Cloud Config, Keycloak, WSO2</li>
-            </ul>
-          </div>
-        </div>
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Professional Certifications</div>
       </div>
-    </section>
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p></p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-
-
-            <h3 class="resume-title">Education</h3>
-        
-            <div class="resume-item">
-              <h4> Software Engineering </h4>
-              <h5>2019 - 2023</h5>
-              <p><em>Private Higher School of Engineering and Technology, Tunisia</em></p>
-              <p>Software engineering (Nightly courses)</p>
-            </div>
-                <div class="resume-item">
-              <h4>Bachelor of IT &amp; Networking</h4>
-              <h5>2016 - 2019</h5>
-              <p><em>High Institute of Informatics and Mathematics of Monastir , Tunisia</em></p>
-              <p>STIC APPLIED LICENSE</p>
-            </div>
-            <h3 class="resume-title">Awards and certifications</h3>
-            <div class="resume-item">
-              <h4>Linux Foundation</h4>
-              <p><em>LFS142: Introduction to Backstage, 2025<br>Prometheus (PCA), 2024<br>Kubestronaut, 2024<br>KCNA, 2024<br>KCSA, 2024<br>Certified Kubernetes Security Specialist, 2024<br>Certified Kubernetes Administrator, 2023<br>Certified Kubernetes Application Developer, 2022</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Amazon Web Services</h4>
-              <p><em>AWS Solution Architect Associate, 2023<br>AWS Cloud Practitioner, 2022</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>VoxxedDays Luxembourg - 2024</h4>
-              <p><em>Participant and part of the company media team</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>KubeCon Spain - 2023</h4>
-              <p><em>Participant (remotely)</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>DevOpsCon Berlin & Munchen - 2022</h4>
-              <p><em>Participant and part of the company media team</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Winner of Ruspina challenge 2019</h4>
-              <p><em>Winner of Ruspina challenge 2019: Coder of the year Tunisia 2019 with an innovative idea based on an Android application, "Waves digital solution," developed in a 24h non-stop challenge.</em></p>
-            </div>
-
-          </div>
-          <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>DevOps Consultant</h4>
-              <h5>04/2024 – 02/2025</h5>
-              <p><em>Utmust Group, Luxembourg</em></p>
-              <p>
-                Upgraded OpenShift clusters across multiple environments (Dev, Test, Staging) on VMware vSphere. Integrated tools like OpenShift Data Foundation, ELK stack, ArgoCD, GitLab Runner, HashiCorp Vault, and Prometheus to ensure a scalable, secure, and automated infrastructure. Led migration of applications and configurations, implemented centralized logging and monitoring, and provided comprehensive documentation to support cross-team knowledge transfer and operational excellence.
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>DevOps Consultant</h4>
-              <h5>01/2024 – 04/2024</h5>
-              <p><em>BIL: Banque Internationale Luxembourg</em></p>
-              <p>
-                I was tasked with building a monitoring solution with auto-remediation for the core banking OpenShift environment, leveraging Prometheus, Dynatrace, Ansible, and an Event-Driven Platform. This effort was carried out in collaboration with the Containers and Development Platform team.
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>DevOps & Cloud Lead Engineer</h4>
-              <h5>06/2022 – 12/2023</h5>
-              <p><em>VERMEG for Banking & Insurance Softwares, Tunisia</em></p>
-              <p>
-                Led the VEGGO team in deploying and optimizing microservices within the Banking business line on AWS/Kubernetes (EKS) environments. Designed scalable AWS architectures, managed Kubernetes clusters, and supported development teams in transitioning to cloud-native solutions. Enhanced CI/CD pipelines, streamlined release management, and ensured high-performance, resilient infrastructure for major banking clients.
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Deployment Analyst</h4>
-              <h5>06/2021 – 06/2022</h5>
-              <p><em>VERMEG for Banking & Insurance Softwares, Tunisia</em></p>
-              <p>
-                Promoted to Deployment Analyst within the Tec team, leading critical initiatives for the Insurance Business Line product, Solife. Managed production deployments, SaaS migration, and cloud compliance for key clients like Cardif LuxVie and Lifetri. Oversaw system administration, developed automation scripts, and supported high-availability setups in both on-premises and AWS environments to ensure performance, scalability, and reliability.
-              </p>
-            </div>
-            <div class="resume-item">
-              <h4>Software Developer</h4>
-              <h5>06/2019 – 06/2021</h5>
-              <p><em>VERMEG for Banking & Insurance Softwares, Tunisia</em></p>
-              <p>
-                Worked as a Java Backend Developer in the Solife Business Line (R&D), contributing to a Scrum team responsible for maintaining and enhancing a complex JEE insurance application. Key tasks included bug fixing, API development, batch processing, and improving frameworks to support high-performance, multi-database environments while ensuring security and scalability.
-              </p>
-            </div>
-          </div>
-          
-
-           
-          </div>
-        </div>
-
+      <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">International Talks</div>
       </div>
-    </section><!-- End Resume Section -->
-
-
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <div class="row mt-1">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Luxembourg, Luxemnourg</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>kh.hajed@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+352 XXX XX XX XX</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <h3>Hajed Khlifi</h3>
-      <p>“Imagination is more important than knowledge.  For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.”
-        <br/>— Albert Einstein — </p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/hajed-kh/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/hajedkh" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://stackoverflow.com/users/14109227/hajed-kh" target="_blank" class="stack-overflow"><i class="bx bxl-stack-overflow"></i></a>
-        <a href="https://medium.com/@kh.hajed" target="_blank" class="medium"><i class="bx bxl-medium"></i></a>
-      
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>hajedkh</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: [license-url] -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      <div class="stat-item">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Languages Spoken</div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </div>
+</section>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- ======== SERVICES ======== -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">What I Do</div>
+      <h2 class="section-title">Consulting Services</h2>
+      <p class="section-subtitle">End-to-end AI infrastructure delivery — from GPU cluster design to production-grade Kubernetes platforms for regulated European markets.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal stagger-1">
+        <div class="service-icon">&#128312;</div>
+        <div class="service-title">GPU Cluster Architecture</div>
+        <div class="service-desc">Design and deploy high-density GPU clusters (H100/H200) on Cisco C885A and NVIDIA DGX stacks. Full NVIDIA AI stack integration with GPU Operator, CUDA, MIG, and vLLM for production inference.</div>
+        <div class="service-tags">
+          <span class="service-tag">NVIDIA H200</span>
+          <span class="service-tag">DGX Systems</span>
+          <span class="service-tag">Cisco UCS</span>
+          <span class="service-tag">CUDA</span>
+          <span class="service-tag">MIG</span>
+        </div>
+      </div>
+      <div class="service-card reveal stagger-2">
+        <div class="service-icon">&#9781;</div>
+        <div class="service-title">Kubernetes & Cloud Native</div>
+        <div class="service-desc">Architect and automate large-scale Kubernetes platforms with custom operators, Helm charts, and GitOps pipelines. OpenShift, GKE, GDCH, and bare-metal deployments across hybrid environments.</div>
+        <div class="service-tags">
+          <span class="service-tag">Kubernetes</span>
+          <span class="service-tag">OpenShift</span>
+          <span class="service-tag">Operators</span>
+          <span class="service-tag">Helm</span>
+          <span class="service-tag">ArgoCD</span>
+        </div>
+      </div>
+      <div class="service-card reveal stagger-3">
+        <div class="service-icon">&#128274;</div>
+        <div class="service-title">Sovereign & Air-Gapped Cloud</div>
+        <div class="service-desc">Build secure, sovereign cloud platforms for European government and regulated clients. Air-gapped deployments, Google Distributed Cloud Hosted (GDCH), PKI, Vault, and full compliance frameworks.</div>
+        <div class="service-tags">
+          <span class="service-tag">GDCH</span>
+          <span class="service-tag">Air-Gapped</span>
+          <span class="service-tag">Vault</span>
+          <span class="service-tag">PKI</span>
+          <span class="service-tag">Compliance</span>
+        </div>
+      </div>
+      <div class="service-card reveal stagger-4">
+        <div class="service-icon">&#129302;</div>
+        <div class="service-title">AI Platform Deployment</div>
+        <div class="service-desc">Deploy production-grade AI suites including Mistral AI, RAG systems, Agentic AI, and LLM orchestration. Triton Inference Server, RAPIDS, vector databases, and AI Studio integration.</div>
+        <div class="service-tags">
+          <span class="service-tag">Mistral AI</span>
+          <span class="service-tag">RAG</span>
+          <span class="service-tag">Triton</span>
+          <span class="service-tag">vLLM</span>
+          <span class="service-tag">Vector DB</span>
+        </div>
+      </div>
+      <div class="service-card reveal stagger-5">
+        <div class="service-icon"><img src="https://cdn-icons-png.flaticon.com/512/6577/6577286.png" alt="CI/CD" style="width:28px; height:28px;"></div>
+        <div class="service-title">DevOps & Automation</div>
+        <div class="service-desc">Infrastructure as Code with Terraform and Ansible. CI/CD pipelines with GitLab CI, ArgoCD, and Tekton. Full observability stacks with Prometheus, Grafana, and ELK.</div>
+        <div class="service-tags">
+          <span class="service-tag">Terraform</span>
+          <span class="service-tag">Ansible</span>
+          <span class="service-tag">GitLab CI</span>
+          <span class="service-tag">Prometheus</span>
+          <span class="service-tag">Grafana</span>
+        </div>
+      </div>
+      <div class="service-card reveal stagger-6">
+        <div class="service-icon">&#127891;</div>
+        <div class="service-title">Training & Technical Advisory</div>
+        <div class="service-desc">Technical workshops, team coaching, demos, and architecture reviews. Trusted advisor for government and enterprise clients translating regulatory needs into secure technical architectures.</div>
+        <div class="service-tags">
+          <span class="service-tag">Workshops</span>
+          <span class="service-tag">Demos</span>
+          <span class="service-tag">Advisory</span>
+          <span class="service-tag">Architecture Review</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<!-- ======== EXPERIENCE ======== -->
+<section id="experience">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Career Journey</div>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-subtitle">From deployment analyst to principal architect — a trajectory built on deep hands-on infrastructure expertise.</p>
+    </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <div class="timeline">
+
+      <div class="timeline-item current reveal stagger-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">Proximus Luxembourg</span>
+          <span class="timeline-date">Present</span>
+        </div>
+        <div class="timeline-role">Principal Solution Architect — Cloud & AI</div>
+        <div class="timeline-location">Luxembourg, Luxembourg</div>
+        <ul class="timeline-points">
+          <li>Promoted to lead the infrastructure team. Driving end-to-end deployment of a high-density H200 GPU cluster on Cisco C885A servers for European clients.</li>
+          <li>Mastered the full NVIDIA AI stack (GPU Operator, CUDA) with Harvester/Rancher to expand GPU capacity and deploy production-grade Mistral AI suites.</li>
+          <li>Architected and automated large-scale, secure Kubernetes platforms using custom operators, enabling scalable RAG, Agentic AI, and AI inference systems for EU clients.</li>
+          <li>Coaching the team through technical workshops and documentation. Full lifecycle solution delivery including on-site support.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal stagger-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">Proximus Luxembourg</span>
+          <span class="timeline-date">2025 – 2026</span>
+        </div>
+        <div class="timeline-role">Cloud Architect</div>
+        <div class="timeline-location">Luxembourg, Luxembourg</div>
+        <ul class="timeline-points">
+          <li>Led the strategic design of secure, sovereign cloud and AI platforms for European government clients as a trusted technical advisor.</li>
+          <li>Architected and deployed production-grade AI infrastructure with Mistral AI on air-gapped platforms with NVIDIA GPUs for large-scale inference and RAG systems.</li>
+          <li>Designed and automated Kubernetes environments on Google Distributed Cloud Hosted (GDCH) and OpenShift with custom operators.</li>
+          <li>Applied cloud-native best practices as a Google Cloud Partner consultant for high-availability enterprise architectures.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal stagger-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">Sfeir Luxembourg</span>
+          <span class="timeline-date">2024 – 2025</span>
+        </div>
+        <div class="timeline-role">Senior DevOps & Cloud Consultant</div>
+        <div class="timeline-location">Luxembourg, Luxembourg</div>
+        <ul class="timeline-points">
+          <li>Conducted demos for OpenShift AI, deploying and managing LLM models to validate scalable AI workload orchestration.</li>
+          <li>Upgraded production OpenShift clusters from v4.8 to v4.14 on VMware infrastructure.</li>
+          <li>Architected and automated infrastructure solutions, reducing manual operations by 40% with autoscaling to meet business SLAs.</li>
+          <li>Mentored development teams in designing highly available, large-scale microservices architectures on OpenShift.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal stagger-4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">VERMEG — Banking & Insurance</span>
+          <span class="timeline-date">2021 – 2023</span>
+        </div>
+        <div class="timeline-role">DevOps Lead Engineer</div>
+        <div class="timeline-location">Tunis, Tunisia</div>
+        <ul class="timeline-points">
+          <li>Architected and deployed scalable AWS infrastructure (VPC, EC2, EKS, RDS) for data-intensive banking microservices.</li>
+          <li>Managed and optimized Kubernetes clusters on AWS EKS for containerized data-driven applications.</li>
+          <li>Enhanced GitLab CI/CD pipelines and implemented ArgoCD for GitOps deployment workflows.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal stagger-5">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <span class="timeline-company">VERMEG — Banking & Insurance</span>
+          <span class="timeline-date">2019 – 2021</span>
+        </div>
+        <div class="timeline-role">Deployment Analyst — DevOps</div>
+        <div class="timeline-location">Tunis, Tunisia</div>
+        <ul class="timeline-points">
+          <li>Architected and managed foundational Linux infrastructure for high-availability systems.</li>
+          <li>Led a SaaS migration POC using Docker and Kubernetes for containerized high-availability solutions.</li>
+          <li>Developed automation scripts to streamline deployments and managed production releases for major clients (BNP, Cardif, MAIF).</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======== CERTIFICATIONS ======== -->
+<section id="certifications">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-subtitle">Industry-recognized certifications across NVIDIA AI, Kubernetes, and major cloud platforms.</p>
+    </div>
+
+    <div class="certs-grid">
+
+      <div class="cert-card reveal stagger-1">
+        <div class="cert-icon nvidia" style="padding: 3px; overflow:hidden;">
+          <img src="https://blogs.nvidia.com/wp-content/uploads/2024/12/nvt-professional-ai-infrastructure-600x600-1-400x400.png" alt="NVIDIA AI Infrastructure" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">NVIDIA AI Infrastructure Professional (NCP-AII)</div>
+          <div class="cert-issuer">NVIDIA</div>
+          <div class="cert-date">In Progress</div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">DGX Systems</span>
+            <span class="cert-sub">InfiniBand</span>
+            <span class="cert-sub">Base Command</span>
+            <span class="cert-sub">Networking</span>
+            <span class="cert-sub">Storage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal stagger-1">
+        <div class="cert-icon nvidia" style="padding: 3px; overflow:hidden;">
+          <img src="https://blogs.nvidia.com/wp-content/uploads/2024/12/nvt-professional-ai-operations-600x600-1-400x400.png" alt="NCP-AIO" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">NVIDIA AI Operations Professional (NCP-AIO)</div>
+          <div class="cert-issuer">NVIDIA</div>
+          <div class="cert-date">2026</div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">CUDA</span>
+            <span class="cert-sub">Fabric Manager</span>
+            <span class="cert-sub">GPU Operator</span>
+            <span class="cert-sub">Run:ai</span>
+            <span class="cert-sub">Slurm</span>
+            <span class="cert-sub">MIG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal stagger-2">
+        <div class="cert-icon cncf" style="padding: 3px; overflow:hidden;">
+          <img src="https://training.linuxfoundation.org/wp-content/uploads/2024/04/kubestronaut-stacked-color.png" alt="Kubestronaut" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">Kubestronaut (Kubernetes Champion)</div>
+          <div class="cert-issuer">CNCF — Cloud Native Computing Foundation</div>
+          <div class="cert-date">2025</div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">CKA</span>
+            <span class="cert-sub">CKS</span>
+            <span class="cert-sub">CKAD</span>
+            <span class="cert-sub">KCNA</span>
+            <span class="cert-sub">KCSA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal stagger-3">
+        <div class="cert-icon google" style="padding:3px; overflow:hidden;">
+          <img src="https://images.credly.com/images/71c579e0-51fd-4247-b493-d2fa8167157a/image.png" alt="Google Cloud Architect" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">Google Professional Cloud Architect</div>
+          <div class="cert-issuer">Google Cloud</div>
+          <div class="cert-date">2025</div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">GKE</span>
+            <span class="cert-sub">Cloud Run</span>
+            <span class="cert-sub">IAM</span>
+            <span class="cert-sub">VPC</span>
+            <span class="cert-sub">BigQuery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal stagger-4">
+        <div class="cert-icon linux" style="padding:3px; overflow:hidden;">
+          <img src="https://images.credly.com/images/c34436dc-1cfd-4125-a862-35f9c86ca17f/image.png" alt="Prometheus Certified Associate" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">Prometheus Certified Associate (PCA)</div>
+          <div class="cert-issuer">Linux Foundation</div>
+          <div class="cert-date">2024</div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">PromQL</span>
+            <span class="cert-sub">Alertmanager</span>
+            <span class="cert-sub">Grafana</span>
+            <span class="cert-sub">Exporters</span>
+            <span class="cert-sub">Service Discovery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal stagger-5">
+        <div class="cert-icon cncf" style="padding: 3px; overflow:hidden;">
+          <img src="https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Solutions Architect" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">AWS Solutions Architect Associate</div>
+          <div class="cert-issuer">Amazon Web Services</div>
+          <div class="cert-date">2023</div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">EC2</span>
+            <span class="cert-sub">EKS</span>
+            <span class="cert-sub">VPC</span>
+            <span class="cert-sub">RDS</span>
+            <span class="cert-sub">S3</span>
+            <span class="cert-sub">IAM</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ======== SKILLS ======== -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Tech Stack</div>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-subtitle">A deep, hands-on stack spanning GPU infrastructure, AI platforms, cloud native, and security.</p>
+    </div>
+
+    <div class="skills-categories">
+
+      <div class="skill-category reveal stagger-1">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">&#128312;</div>
+          <div class="skill-cat-name">NVIDIA Platform</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill featured">GPU Operator</span>
+          <span class="skill-pill featured">DGX Systems</span>
+          <span class="skill-pill">CUDA</span>
+          <span class="skill-pill">DOCA</span>
+          <span class="skill-pill">MIG</span>
+          <span class="skill-pill featured">vLLM</span>
+          <span class="skill-pill">Triton Server</span>
+          <span class="skill-pill">RAPIDS</span>
+          <span class="skill-pill">NCP-AIO</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal stagger-2">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">&#129302;</div>
+          <div class="skill-cat-name">AI Infrastructure</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill featured">Mistral AI</span>
+          <span class="skill-pill">Claude API</span>
+          <span class="skill-pill featured">RAG Systems</span>
+          <span class="skill-pill">AI Studio</span>
+          <span class="skill-pill">LLM Orchestration</span>
+          <span class="skill-pill">Vector Databases</span>
+          <span class="skill-pill featured">Agentic AI</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal stagger-3">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">&#9781;</div>
+          <div class="skill-cat-name">Kubernetes & Orchestration</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill featured">Kubestronaut</span>
+          <span class="skill-pill">Helm</span>
+          <span class="skill-pill featured">Custom Operators</span>
+          <span class="skill-pill">OpenShift</span>
+          <span class="skill-pill">GKE</span>
+          <span class="skill-pill">CSI / CNI</span>
+          <span class="skill-pill">Harvester</span>
+          <span class="skill-pill">Rancher</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal stagger-4">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">&#9729;</div>
+          <div class="skill-cat-name">Cloud Platforms</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill featured">GDCH / GDCA</span>
+          <span class="skill-pill">GCP</span>
+          <span class="skill-pill">AWS</span>
+          <span class="skill-pill">OpenStack</span>
+          <span class="skill-pill">Sovereign Cloud</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal stagger-5">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">&#9881;</div>
+          <div class="skill-cat-name">Infrastructure & Automation</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill featured">Terraform</span>
+          <span class="skill-pill featured">Ansible</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Bash</span>
+          <span class="skill-pill">Cisco UCS/M8</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal stagger-6">
+        <div class="skill-cat-header">
+          <div class="skill-cat-icon">&#128274;</div>
+          <div class="skill-cat-name">Security & Observability</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">HashiCorp Vault</span>
+          <span class="skill-pill">Keycloak</span>
+          <span class="skill-pill">PKI</span>
+          <span class="skill-pill">Prometheus</span>
+          <span class="skill-pill">Grafana</span>
+          <span class="skill-pill">ELK Stack</span>
+          <span class="skill-pill">GitLab CI</span>
+          <span class="skill-pill">ArgoCD</span>
+          <span class="skill-pill">Tekton</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Languages -->
+    <div class="reveal" style="margin-top: 40px;">
+      <h3 style="font-family:'DM Serif Display',serif; font-size:1.3rem; margin-bottom:4px;">Languages</h3>
+      <div class="languages-row">
+        <div class="lang-chip">
+          <span class="lang-name">English</span>
+          <span class="lang-level">Fluent</span>
+        </div>
+        <div class="lang-chip">
+          <span class="lang-name">French</span>
+          <span class="lang-level">Fluent</span>
+        </div>
+        <div class="lang-chip">
+          <span class="lang-name">Arabic</span>
+          <span class="lang-level">Native</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PROJECTS ======== -->
+<section id="projects">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Select engagements showcasing GPU infrastructure, Kubernetes platforms, AI deployments, and cloud-native engineering at scale.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- KubeBrain -->
+      <div class="project-card reveal stagger-1">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#129504;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">KubeBrain — Multi-Agent Kubernetes AI Assistant</div>
+          <div class="project-desc">AI-powered Kubernetes management system built on CrewAI and MCP. Four specialized agents — Teacher, Investigator, Inspector, Executor — collaborate through workflow crews to diagnose cluster issues, validate configurations, explain concepts, and safely execute operations.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">CrewAI</span>
+            <span class="project-tech-tag">MCP</span>
+            <span class="project-tech-tag">Python</span>
+            <span class="project-tech-tag">Streamlit</span>
+            <span class="project-tech-tag">Kubernetes</span>
+            <span class="project-tech-tag">Agentic AI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- H200 GPU Cluster -->
+      <div class="project-card reveal stagger-2">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#128421;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">H200 GPU Cluster — EU Sovereign Cloud</div>
+          <div class="project-desc">End-to-end design and deployment of a high-density NVIDIA H200 GPU cluster on Cisco C885A servers. Full NVIDIA AI stack (GPU Operator, CUDA, MIG) with Harvester/Rancher running production Mistral AI inference and fine-tuning workloads at scale for European enterprise clients.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">NVIDIA H200</span>
+            <span class="project-tech-tag">Cisco C885A</span>
+            <span class="project-tech-tag">GPU Operator</span>
+            <span class="project-tech-tag">Mistral AI</span>
+            <span class="project-tech-tag">Harvester</span>
+            <span class="project-tech-tag">MIG</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Air-Gapped AI Platform -->
+      <div class="project-card reveal stagger-3">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#128274;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Air-Gapped AI Platform — Government</div>
+          <div class="project-desc">Architected full-stack sovereign cloud on Google Distributed Cloud Hosted (GDCH) — compute, networking, IAM, storage, and Kubernetes with custom operators. NVIDIA GPU-powered Mistral AI suite (Mistral Large, Codestral, embeddings) for inference, RAG, and semantic search in fully isolated environments.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">GDCH</span>
+            <span class="project-tech-tag">Air-Gapped</span>
+            <span class="project-tech-tag">NVIDIA GPU</span>
+            <span class="project-tech-tag">Mistral Large</span>
+            <span class="project-tech-tag">RAG</span>
+            <span class="project-tech-tag">OpenShift</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Policy ETL -->
+      <div class="project-card reveal stagger-4">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#9881;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Insurance Policy ETL — Event-Driven Batch Platform</div>
+          <div class="project-desc">Kubernetes-native serverless ETL platform for insurance policy extraction and transformation. Spring Batch jobs auto-scaled with KEDA and Knative on event-driven triggers, deployed via Tekton CI/CD pipelines and ArgoCD GitOps. Fully automated infrastructure provisioning with Terraform, Ansible, and Helm.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">Spring Batch</span>
+            <span class="project-tech-tag">KEDA</span>
+            <span class="project-tech-tag">Knative</span>
+            <span class="project-tech-tag">Tekton</span>
+            <span class="project-tech-tag">ArgoCD</span>
+            <span class="project-tech-tag">Terraform</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dapr Microservices -->
+      <div class="project-card reveal stagger-5">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#128640;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Dapr-Powered HA Microservices Platform</div>
+          <div class="project-desc">Implemented Dapr (Distributed Application Runtime) as a sidecar-based runtime to simplify service-to-service invocation, state management, pub/sub messaging, and distributed tracing across a large-scale microservices environment — enabling high availability and cloud portability without vendor lock-in.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">Dapr</span>
+            <span class="project-tech-tag">Kubernetes</span>
+            <span class="project-tech-tag">Pub/Sub</span>
+            <span class="project-tech-tag">State Management</span>
+            <span class="project-tech-tag">OpenShift</span>
+            <span class="project-tech-tag">Observability</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kubernetes Platform -->
+      <div class="project-card reveal stagger-6">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#9781;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Kubernetes Platform — Enterprise Scale</div>
+          <div class="project-desc">Architected large-scale Kubernetes platforms with custom operators, integrated observability, and standardized deployment patterns. Powers scalable RAG, Agentic AI, and LLM serving pipelines with reusable platform components adopted across multiple engineering teams.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">Kubernetes</span>
+            <span class="project-tech-tag">Custom Operators</span>
+            <span class="project-tech-tag">OpenShift</span>
+            <span class="project-tech-tag">Helm</span>
+            <span class="project-tech-tag">ArgoCD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWS Banking -->
+      <div class="project-card reveal stagger-1">
+        <div class="project-thumb">
+          <div class="project-thumb-placeholder">&#9729;</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">AWS Banking Microservices — VERMEG</div>
+          <div class="project-desc">Led the architecture of scalable AWS infrastructure (VPC, EC2, EKS, RDS) for data-intensive banking microservices. GitOps deployment with ArgoCD and optimized EKS clusters serving demos and POCs for major financial clients including BNP, Cardif, and MAIF.</div>
+          <div class="project-tech">
+            <span class="project-tech-tag">AWS EKS</span>
+            <span class="project-tech-tag">Terraform</span>
+            <span class="project-tech-tag">ArgoCD</span>
+            <span class="project-tech-tag">GitLab CI</span>
+            <span class="project-tech-tag">RDS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ======== SPEAKING ======== -->
+<section id="speaking">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">On Stage</div>
+      <h2 class="section-title">International Speaking</h2>
+      <p class="section-subtitle">Sharing knowledge on cloud-native and AI infrastructure at leading industry conferences across Europe and the US.</p>
+    </div>
+
+    <div class="speaking-grid">
+      <div class="speaking-card reveal stagger-1">
+        <div class="speaking-event">Container Days</div>
+        <div class="speaking-location">London, UK</div>
+        <div class="speaking-year">2026</div>
+      </div>
+      <div class="speaking-card reveal stagger-2">
+        <div class="speaking-event">KCD New York</div>
+        <div class="speaking-location">New York, USA</div>
+        <div class="speaking-year">2025</div>
+      </div>
+      <div class="speaking-card reveal stagger-3">
+        <div class="speaking-event">Container Days</div>
+        <div class="speaking-location">Hamburg, Germany</div>
+        <div class="speaking-year">2025</div>
+      </div>
+      <div class="speaking-card reveal stagger-4">
+        <div class="speaking-event">Voxxed Days</div>
+        <div class="speaking-location">Luxembourg</div>
+        <div class="speaking-year">2025</div>
+      </div>
+      <div class="speaking-card reveal stagger-5">
+        <div class="speaking-event">Cloud Native Days</div>
+        <div class="speaking-location">Luxembourg</div>
+        <div class="speaking-year">2024</div>
+      </div>
+      <div class="speaking-card reveal stagger-6" style="border-style:dashed; display:flex; align-items:center; justify-content:center;">
+        <div style="text-align:center;">
+          <a href="https://sessionize.com/hajed-khlifi/" target="_blank" style="font-size:0.92rem; font-weight:600;">
+            View Full Speaker Profile &#8594;
+          </a>
+          <div style="font-size:0.78rem; color:var(--text-dim); margin-top:6px;">sessionize.com/hajed-khlifi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== EDUCATION ======== -->
+<section id="education" style="padding-top:60px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Education</div>
+      <h2 class="section-title">Academic Background</h2>
+    </div>
+      <div class="cert-card reveal stagger-1" style="margin-top:28px; max-width:500px;">
+      <div class="cert-icon cncf" style="font-size:1rem;">&#127891;</div>
+      <div class="cert-info">
+        <div class="cert-name">Masters of Cloud architecture Engineering - Evening courses</div>
+        <div class="cert-issuer">Esprit University - Tunis, Tunisia</div>
+        <div class="cert-date">2019 – 2022</div>
+      </div>
+    </div>
+    <div class="cert-card reveal stagger-1" style="margin-top:28px; max-width:500px;">
+      <div class="cert-icon cncf" style="font-size:1rem;">&#127891;</div>
+      <div class="cert-info">
+        <div class="cert-name">Bachelor's Degree in Computer Systems & Networking</div>
+        <div class="cert-issuer">University of Monastir — Monastir, Tunisia</div>
+        <div class="cert-date">2016 – 2019</div>
+      </div>
+    </div>
+        <div class="cert-card reveal stagger-1" style="margin-top:28px; max-width:500px;">
+      <div class="cert-icon cncf" style="font-size:1rem;">&#127891;</div>
+      <div class="cert-info">
+        <div class="cert-name">Bachelor's Degree in Mathematics</div>
+        <div class="cert-issuer">Lessouda Superior school</div>
+        <div class="cert-date">2013 – 2016</div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- ======== CONTACT ======== -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Let's Talk</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Looking for a GPU infrastructure architect or Kubernetes expert? I'm available for freelance consulting engagements across Europe.</p>
+    </div>
+
+    <div class="contact-grid reveal stagger-1">
+      <div>
+        <div class="contact-info-list">
+          <div class="contact-item">
+            <div class="contact-icon">&#128222;</div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value"><a href="tel:+352********">+352 *** *** ***</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#9993;</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value"><a href="/cdn-cgi/l/email-protection#256e4d0b4d444f4041654248444c490b464a48"><span class="__cf_email__" data-cfemail="12597a3c7a7378777652757f737b7e3c717d7f"> Kh.hajed@gmail.com</span></a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128205;</div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Luxembourg, Luxembourg</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128279;</div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value"><a href="https://linkedin.com/in/hajed-kh" target="_blank">linkedin.com/in/hajed-kh</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">&#128187;</div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <div class="contact-value"><a href="https://github.com/hajedkh" target="_blank">github.com/hajedkh</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 36px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); border-left: 3px solid var(--accent);">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); font-weight:700; margin-bottom:8px;">Availability</div>
+          <div style="font-size:0.92rem; color:var(--text); line-height:1.6;">
+            Open to freelance consulting contracts across the EU. Available for remote engagements with on-site support as needed. Short-term architecture reviews to long-term platform delivery.
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" placeholder="Your full name" id="form-name">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com" id="form-email">
+        </div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" placeholder="Your company name" id="form-company">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your project or infrastructure challenge..." id="form-message"></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="handleFormSubmit()" style="width:100%; justify-content:center;">
+          Send Message
+        </button>
+        <p style="font-size:0.75rem; color:var(--text-dim); text-align:center; margin-top:4px;">
+          Or email me directly at <a href=""><span class="__cf_email__" data-cfemail="93d8fbbdfbf2f9f6f7d3f4fef2faffbdf0fcfe">Kh.hajed@gmail.com</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-copy">&copy; 2026 Hajed Khlifi. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="https://linkedin.com/in/hajed-kh" target="_blank">LinkedIn</a>
+        <a href="https://github.com/hajedkh" target="_blank">GitHub</a>
+        <a href="https://sessionize.com/hajed-khlifi/" target="_blank">Sessionize</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======== JAVASCRIPT ======== -->
+<script>
+// ======================
+// Theme: detect, apply, toggle, persist
+// ======================
+(function() {
+  const root = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+
+  // 1. Check localStorage, default to dark
+  function getPreferredTheme() {
+    const stored = localStorage.getItem('hk-theme');
+    if (stored === 'dark' || stored === 'light') return stored;
+    return 'dark';
+  }
+
+  // 2. Apply theme
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('hk-theme', theme);
+  }
+
+  applyTheme(getPreferredTheme());
+
+  // 3. Toggle on click
+  toggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+})();
+
+// ======================
+// Scroll reveal
+// ======================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ======================
+// Navbar scroll effect
+// ======================
+const navbar = document.getElementById('navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  navbar.classList.toggle('scrolled', currentScroll > 50);
+  lastScroll = currentScroll;
+});
+
+// ======================
+// Mobile menu toggle
+// ======================
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Close mobile menu when clicking a link
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+  });
+});
+
+// ======================
+// Active nav link on scroll
+// ======================
+const sections = document.querySelectorAll('section[id]');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// ======================
+// Form handler (placeholder)
+// ======================
+function handleFormSubmit() {
+  const name = document.getElementById('form-name').value;
+  const email = document.getElementById('form-email').value;
+  const company = document.getElementById('form-company').value;
+  const message = document.getElementById('form-message').value;
+
+  if (!name || !email || !message) {
+    alert('Please fill in all required fields (Name, Email, Message).');
+    return;
+  }
+
+  // Option 1: Open email client with pre-filled content
+  const subject = encodeURIComponent(`Consulting Inquiry from ${name} — ${company || 'Individual'}`);
+  const body = encodeURIComponent(`Hi Hajed,\n\n${message}\n\nBest regards,\n${name}\n${company || ''}\n${email}`);
+  window.location.href = `mailto:Kh.hajed@gmail.com?subject=${subject}&body=${body}`;
+
+  // Optional: You can replace this with a form backend like Formspree, Netlify Forms, etc.
+  // Example with Formspree:
+  // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
+  //   body: JSON.stringify({ name, email, company, message })
+  // }).then(() => alert('Message sent!')).catch(() => alert('Error sending message.'));
+}
+
+// ======================
+// Smooth scroll for anchor links
+// ======================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
 
 </body>
-
 </html>
