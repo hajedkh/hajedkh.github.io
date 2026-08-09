@@ -875,7 +875,14 @@ section {
 .cert-icon.google { background: var(--cert-google-bg); color: var(--gcp); border: 1px solid var(--cert-google-border); }
 .cert-icon.linux { background: var(--cert-linux-bg); color: var(--aws); border: 1px solid var(--cert-linux-border); }
 .cert-icon.aws { background: var(--cert-aws-bg); color: var(--aws); border: 1px solid var(--cert-aws-border); }
+.cert-icon.quantori { background: var(--accent-a08); color: var(--accent); border: 1px solid var(--accent-a20); }
 
+.cert-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-top: 8px;
+}
 .cert-info { flex: 1; }
 
 .cert-name {
@@ -1660,12 +1667,28 @@ body *:not(script):not(style) {
     </div>
 
     <div class="timeline">
-
       <div class="timeline-item current reveal stagger-1">
         <div class="timeline-dot"></div>
         <div class="timeline-header">
+          <span class="timeline-company">Quantori</span>
+          <span class="timeline-date">2026 – Present</span>
+        </div>
+        <div class="timeline-role">HPC Solutions Architect — Cloud & AI Infrastructure</div>
+        <div class="timeline-location">Luxembourg, Luxembourg — Remote</div>
+        <ul class="timeline-points">
+          <li>Designing and delivering HPC and GPU platforms for biopharma and agri-science R&D clients — Pfizer, Sanofi, Syngenta and other life-sciences organizations.</li>
+          <li>Lead HPC Cloud Architect on a global pharma HPC fabric program: AWS ParallelCluster + Slurm for tightly-coupled workloads (Schrödinger, CryoEM), AWS Batch + Nextflow for containerized pipelines, FSx for Lustre scratch, and Prometheus/Loki/Grafana observability.</li>
+          <li>Leading an HPC strategy and design discovery engagement — target architecture, GPU buy-vs-rent sourcing strategy, TCO model, and executive roadmap.</li>
+          <li>Ran structured AI workload profiling across ~22 pharma R&D teams for NVIDIA, turning interviews into workload matrices and a C-level findings deck.</li>
+          <li>Building production Terraform IaC for AWS HPC with observability and cost controls built in.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal stagger-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
           <span class="timeline-company">Proximus Luxembourg</span>
-          <span class="timeline-date">Present</span>
+          <span class="timeline-date">2025 – 2026</span>
         </div>
         <div class="timeline-role">Principal Solution Architect — Cloud & AI</div>
         <div class="timeline-location">Luxembourg, Luxembourg</div>
@@ -1770,7 +1793,31 @@ body *:not(script):not(style) {
     </div>
 
     <div class="certs-grid">
-
+<div class="cert-card reveal stagger-1">
+        <div class="cert-icon quantori" style="padding:6px; overflow:hidden;">
+          <img src="https://avatars.githubusercontent.com/u/42839720?s=280&v=4"
+               onerror="this.onerror=null;this.src='https://www.google.com/s2/favicons?domain=quantori.com&sz=128';"
+               alt="Quantori"
+               style="width:100%; height:100%; object-fit:contain;">
+        </div>
+        <div class="cert-info">
+          <div class="cert-name">&#127942; 1st Place — Quantori AI Hackathon 2026</div>
+          <div class="cert-issuer">Quantori — Team "Golden SMILES"</div>
+          <div class="cert-date">July 2026</div>
+          <div class="cert-desc">
+            Won a 48-hour non-stop company-wide challenge with the <strong>Target Triage Copilot</strong> —
+            a multi-agent system that triages drug-discovery targets, chaining LangGraph agents over
+            RDKit, ChEMBL and PubMed to score and rank candidates for scientists.
+          </div>
+          <div class="cert-badge-row">
+            <span class="cert-sub">LangGraph</span>
+            <span class="cert-sub">Agentic AI</span>
+            <span class="cert-sub">RDKit</span>
+            <span class="cert-sub">ChEMBL</span>
+            <span class="cert-sub">PubMed</span>
+          </div>
+        </div>
+      </div>
       <div class="cert-card reveal stagger-1">
         <div class="cert-icon nvidia" style="padding: 3px; overflow:hidden;">
           <img src="https://blogs.nvidia.com/wp-content/uploads/2024/12/nvt-professional-ai-infrastructure-600x600-1-400x400.png" alt="NVIDIA AI Infrastructure" style="width:100%; height:100%; object-fit:cover; border-radius:11px;">
